@@ -267,7 +267,7 @@ class Receiver:
         self.tick4Q.put(['콜렉터종료', codes])
 
     def UpdateJangolist(self, data):
-        code = data.split(' ')[1]
+        code = data.split(' ')[1]   # data; [str, code]
         if '잔고편입' in data and code not in self.list_jang:
             self.list_jang.append(code)
             if code not in self.list_gsjm2:
